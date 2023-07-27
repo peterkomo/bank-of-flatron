@@ -16,4 +16,11 @@ const handleSubmit = (event) => {
         amount: parseFloat(amount), // Convert the amount to a float value.
         id: Date.now(), // Use the current timestamp as the unique ID.
       };
-  
+      onAddTransaction(newTransaction); // Call the onAddTransaction prop with the new transaction.
+
+      // Reset form input values to empty strings after adding the transaction
+      setDate("");
+      setDescription("");
+      setCategory("");
+      setAmount("");
+    };
